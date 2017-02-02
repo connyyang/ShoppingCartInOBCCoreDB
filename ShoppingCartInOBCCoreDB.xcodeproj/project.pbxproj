@@ -15,6 +15,7 @@
 		AEB1C1F31E42D8AE00C992A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB1C1F21E42D8AE00C992A4 /* Assets.xcassets */; };
 		AEB1C1F61E42D8AE00C992A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB1C1F41E42D8AE00C992A4 /* LaunchScreen.storyboard */; };
 		AEB1C2011E42D8AE00C992A4 /* ShoppingCartInOBCCoreDBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB1C2001E42D8AE00C992A4 /* ShoppingCartInOBCCoreDBTests.m */; };
+		AEB1C2131E42E42600C992A4 /* ShoppingValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB1C2121E42E42600C992A4 /* ShoppingValueTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		AEB1C1FC1E42D8AE00C992A4 /* ShoppingCartInOBCCoreDBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingCartInOBCCoreDBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB1C2001E42D8AE00C992A4 /* ShoppingCartInOBCCoreDBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartInOBCCoreDBTests.m; sourceTree = "<group>"; };
 		AEB1C2021E42D8AE00C992A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEB1C2111E42E42600C992A4 /* ShoppingValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingValueTransformer.h; sourceTree = "<group>"; };
+		AEB1C2121E42E42600C992A4 /* ShoppingValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingValueTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,13 +86,12 @@
 		AEB1C1E21E42D8AE00C992A4 /* ShoppingCartInOBCCoreDB */ = {
 			isa = PBXGroup;
 			children = (
+				AEB1C2101E42E3D000C992A4 /* Controller */,
+				AEB1C20F1E42E3CA00C992A4 /* View */,
+				AEB1C20E1E42E3C300C992A4 /* Model */,
 				AEB1C1E61E42D8AE00C992A4 /* AppDelegate.h */,
 				AEB1C1E71E42D8AE00C992A4 /* AppDelegate.m */,
-				AEB1C1E91E42D8AE00C992A4 /* ViewController.h */,
-				AEB1C1EA1E42D8AE00C992A4 /* ViewController.m */,
-				AEB1C1EC1E42D8AE00C992A4 /* Main.storyboard */,
 				AEB1C1F21E42D8AE00C992A4 /* Assets.xcassets */,
-				AEB1C1F41E42D8AE00C992A4 /* LaunchScreen.storyboard */,
 				AEB1C1F71E42D8AE00C992A4 /* Info.plist */,
 				AEB1C1EF1E42D8AE00C992A4 /* ShoppingCartInOBCCoreDB.xcdatamodeld */,
 				AEB1C1E31E42D8AE00C992A4 /* Supporting Files */,
@@ -112,6 +114,33 @@
 				AEB1C2021E42D8AE00C992A4 /* Info.plist */,
 			);
 			path = ShoppingCartInOBCCoreDBTests;
+			sourceTree = "<group>";
+		};
+		AEB1C20E1E42E3C300C992A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AEB1C2111E42E42600C992A4 /* ShoppingValueTransformer.h */,
+				AEB1C2121E42E42600C992A4 /* ShoppingValueTransformer.m */,
+				AEB1C1F41E42D8AE00C992A4 /* LaunchScreen.storyboard */,
+				AEB1C1EC1E42D8AE00C992A4 /* Main.storyboard */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AEB1C20F1E42E3CA00C992A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AEB1C2101E42E3D000C992A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AEB1C1E91E42D8AE00C992A4 /* ViewController.h */,
+				AEB1C1EA1E42D8AE00C992A4 /* ViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB1C2131E42E42600C992A4 /* ShoppingValueTransformer.m in Sources */,
 				AEB1C1F11E42D8AE00C992A4 /* ShoppingCartInOBCCoreDB.xcdatamodeld in Sources */,
 				AEB1C1EB1E42D8AE00C992A4 /* ViewController.m in Sources */,
 				AEB1C1E81E42D8AE00C992A4 /* AppDelegate.m in Sources */,
