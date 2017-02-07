@@ -15,5 +15,7 @@
     NSMutableArray<Product *> *products;
 }
 
+@property (nonatomic, retain) NSMutableArray<Product *> *products;
+
 @end
 

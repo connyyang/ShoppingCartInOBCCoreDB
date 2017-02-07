@@ -28,6 +28,9 @@ NSManagedObjectContext *managedObjectContext;
     // define managedObjectContext object
     managedObjectContext = appDelegate.persistentContainer.viewContext;
     
+    // declare products NSMutableArray
+    self.products = [[NSMutableArray<Product *> alloc]init];
+    
     //[self createProducts];
     [self fetchProducts];
 }
@@ -57,13 +60,16 @@ NSManagedObjectContext *managedObjectContext;
         for(NSManagedObject *result in results)
         {
             Product * product = result;
-            [products addObject:product];
+           
+            [self.products addObject:product];
+            
+            NSLog(@"products : %@", self.products);
         }
         //products = (NSArray<Product *>)results;
         //NSLog(@"results: %@",results);
     }
     
-    
+    NSLog(@"products number: %@",[self.products count]);
 }
 
 -(void)createProducts{
@@ -110,6 +116,7 @@ NSManagedObjectContext *managedObjectContext;
         
     }
     cell.product = products[indexPath.row];
+    NSLog(@"product");
     return cell;
 }
 
