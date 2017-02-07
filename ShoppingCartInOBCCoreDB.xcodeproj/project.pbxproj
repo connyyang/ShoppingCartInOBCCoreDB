@@ -16,6 +16,8 @@
 		AEB1C1F61E42D8AE00C992A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB1C1F41E42D8AE00C992A4 /* LaunchScreen.storyboard */; };
 		AEB1C2011E42D8AE00C992A4 /* ShoppingCartInOBCCoreDBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB1C2001E42D8AE00C992A4 /* ShoppingCartInOBCCoreDBTests.m */; };
 		AEB1C2131E42E42600C992A4 /* ShoppingValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB1C2121E42E42600C992A4 /* ShoppingValueTransformer.m */; };
+		AEB1C2621E49DC7B00C992A4 /* Product+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB1C25F1E49DC7B00C992A4 /* Product+CoreDataClass.m */; };
+		AEB1C2631E49DC7B00C992A4 /* Product+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB1C2611E49DC7B00C992A4 /* Product+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,10 @@
 		AEB1C2021E42D8AE00C992A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEB1C2111E42E42600C992A4 /* ShoppingValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingValueTransformer.h; sourceTree = "<group>"; };
 		AEB1C2121E42E42600C992A4 /* ShoppingValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingValueTransformer.m; sourceTree = "<group>"; };
+		AEB1C25E1E49DC7B00C992A4 /* Product+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Product+CoreDataClass.h"; path = "../Product+CoreDataClass.h"; sourceTree = "<group>"; };
+		AEB1C25F1E49DC7B00C992A4 /* Product+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Product+CoreDataClass.m"; path = "../Product+CoreDataClass.m"; sourceTree = "<group>"; };
+		AEB1C2601E49DC7B00C992A4 /* Product+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Product+CoreDataProperties.h"; path = "../Product+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AEB1C2611E49DC7B00C992A4 /* Product+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Product+CoreDataProperties.m"; path = "../Product+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,10 @@
 		AEB1C20E1E42E3C300C992A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AEB1C25E1E49DC7B00C992A4 /* Product+CoreDataClass.h */,
+				AEB1C25F1E49DC7B00C992A4 /* Product+CoreDataClass.m */,
+				AEB1C2601E49DC7B00C992A4 /* Product+CoreDataProperties.h */,
+				AEB1C2611E49DC7B00C992A4 /* Product+CoreDataProperties.m */,
 				AEB1C2111E42E42600C992A4 /* ShoppingValueTransformer.h */,
 				AEB1C2121E42E42600C992A4 /* ShoppingValueTransformer.m */,
 				AEB1C1F41E42D8AE00C992A4 /* LaunchScreen.storyboard */,
@@ -246,6 +256,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEB1C2131E42E42600C992A4 /* ShoppingValueTransformer.m in Sources */,
+				AEB1C2621E49DC7B00C992A4 /* Product+CoreDataClass.m in Sources */,
+				AEB1C2631E49DC7B00C992A4 /* Product+CoreDataProperties.m in Sources */,
 				AEB1C1F11E42D8AE00C992A4 /* ShoppingCartInOBCCoreDB.xcdatamodeld in Sources */,
 				AEB1C1EB1E42D8AE00C992A4 /* ViewController.m in Sources */,
 				AEB1C1E81E42D8AE00C992A4 /* AppDelegate.m in Sources */,
@@ -446,6 +458,7 @@
 				AEB1C2071E42D8AE00C992A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEB1C2081E42D8AE00C992A4 /* Build configuration list for PBXNativeTarget "ShoppingCartInOBCCoreDBTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +467,7 @@
 				AEB1C20A1E42D8AE00C992A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

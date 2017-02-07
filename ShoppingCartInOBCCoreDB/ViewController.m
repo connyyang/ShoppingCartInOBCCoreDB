@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "Product+CoreDataClass.h"
 
 NSManagedObjectContext *managedObjectContext;
 
@@ -39,6 +40,11 @@ NSManagedObjectContext *managedObjectContext;
 
 -(void)fetchProducts{
     NSFetchRequest * fetch = [NSFetchRequest fetchRequestWithEntityName:@"Product"];
+    
+    // This is where condition
+    //NSPredicate * predict = [NSPredicate predicateWithFormat:@"product_id","Apple12345"];
+    //[fetch setPredicate:predict];
+    
     NSError *error = nil;
     NSArray *results = [managedObjectContext executeFetchRequest:fetch error:&error];
     
@@ -47,8 +53,15 @@ NSManagedObjectContext *managedObjectContext;
     }
     else
     {
-        NSLog(@"results: %@",results);
+        for(NSManagedObject *result in results)
+        {
+            NSLog(@"%@",result);
+            //Product * product = nil;
+        }
+        //products = (NSArray<Product *>)results;
+        //NSLog(@"results: %@",results);
     }
+    
     
 }
 
