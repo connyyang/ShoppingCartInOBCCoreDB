@@ -55,7 +55,8 @@ NSManagedObjectContext *managedObjectContext;
     {
         for(NSManagedObject *result in results)
         {
-            NSLog(@"%@",result);
+            Product * product = result;
+            NSLog(@"product name:%@",product.product_name);
             //Product * product = nil;
         }
         //products = (NSArray<Product *>)results;
