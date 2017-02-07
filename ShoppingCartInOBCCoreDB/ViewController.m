@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "Product+CoreDataClass.h"
+#import "ProductTableViewCell.h"
 
 NSManagedObjectContext *managedObjectContext;
 
@@ -102,13 +103,13 @@ NSManagedObjectContext *managedObjectContext;
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString * productCell = @"ProductCell";
     
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:productCell];
+    ProductTableViewCell * cell = (ProductTableViewCell*)[tableView dequeueReusableCellWithIdentifier:productCell];
     
     if(cell == nil){
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:productCell];
+        cell = (ProductTableViewCell*)[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:productCell];
         
     }
-    
+    cell.product = products[indexPath.row];
     return cell;
 }
 

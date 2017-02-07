@@ -27,7 +27,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="140" id="wdL-Ba-s5O">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="140" id="wdL-Ba-s5O" customClass="ProductTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wdL-Ba-s5O" id="Fvq-c8-HV0">
@@ -64,6 +64,9 @@
                                                                 <constraint firstAttribute="width" constant="94" id="epH-xE-WSk"/>
                                                             </constraints>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <connections>
+                                                                <action selector="stepperDidChange:" destination="wdL-Ba-s5O" eventType="valueChanged" id="kDT-3v-UVi"/>
+                                                            </connections>
                                                         </stepper>
                                                     </subviews>
                                                 </stackView>
@@ -92,6 +95,12 @@
                                                 <constraint firstItem="EBs-PD-q4J" firstAttribute="leading" secondItem="Fvq-c8-HV0" secondAttribute="leadingMargin" id="zyT-qN-qfo"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="proImageView" destination="6pV-Rd-LuU" id="5Sm-Eq-bhV"/>
+                                            <outlet property="proNameLable" destination="EBs-PD-q4J" id="qM9-RR-XHO"/>
+                                            <outlet property="proPriceLabel" destination="apC-je-HBf" id="F26-9y-IpK"/>
+                                            <outlet property="proQtyLabel" destination="HSB-An-UW5" id="nDO-wc-ALX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

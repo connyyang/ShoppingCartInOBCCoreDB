@@ -18,6 +18,7 @@
 		AEB1C2131E42E42600C992A4 /* ShoppingValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB1C2121E42E42600C992A4 /* ShoppingValueTransformer.m */; };
 		AEB1C2621E49DC7B00C992A4 /* Product+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB1C25F1E49DC7B00C992A4 /* Product+CoreDataClass.m */; };
 		AEB1C2631E49DC7B00C992A4 /* Product+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB1C2611E49DC7B00C992A4 /* Product+CoreDataProperties.m */; };
+		AEB1C2661E49F32600C992A4 /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB1C2651E49F32600C992A4 /* ProductTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		AEB1C25F1E49DC7B00C992A4 /* Product+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Product+CoreDataClass.m"; path = "../Product+CoreDataClass.m"; sourceTree = "<group>"; };
 		AEB1C2601E49DC7B00C992A4 /* Product+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Product+CoreDataProperties.h"; path = "../Product+CoreDataProperties.h"; sourceTree = "<group>"; };
 		AEB1C2611E49DC7B00C992A4 /* Product+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Product+CoreDataProperties.m"; path = "../Product+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AEB1C2641E49F32600C992A4 /* ProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewCell.h; sourceTree = "<group>"; };
+		AEB1C2651E49F32600C992A4 /* ProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 			children = (
 				AEB1C1E91E42D8AE00C992A4 /* ViewController.h */,
 				AEB1C1EA1E42D8AE00C992A4 /* ViewController.m */,
+				AEB1C2641E49F32600C992A4 /* ProductTableViewCell.h */,
+				AEB1C2651E49F32600C992A4 /* ProductTableViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 				AEB1C2631E49DC7B00C992A4 /* Product+CoreDataProperties.m in Sources */,
 				AEB1C1F11E42D8AE00C992A4 /* ShoppingCartInOBCCoreDB.xcdatamodeld in Sources */,
 				AEB1C1EB1E42D8AE00C992A4 /* ViewController.m in Sources */,
+				AEB1C2661E49F32600C992A4 /* ProductTableViewCell.m in Sources */,
 				AEB1C1E81E42D8AE00C992A4 /* AppDelegate.m in Sources */,
 				AEB1C1E51E42D8AE00C992A4 /* main.m in Sources */,
 			);
