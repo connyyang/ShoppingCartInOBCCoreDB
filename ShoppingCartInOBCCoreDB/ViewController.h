@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Product+CoreDataClass.h"
 
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
-   // NSArray<Product *> *products;
+    NSMutableArray<Product *> *products;
 }
 
 @end

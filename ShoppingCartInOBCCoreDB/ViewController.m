@@ -56,8 +56,7 @@ NSManagedObjectContext *managedObjectContext;
         for(NSManagedObject *result in results)
         {
             Product * product = result;
-            NSLog(@"product name:%@",product.product_name);
-            //Product * product = nil;
+            [products addObject:product];
         }
         //products = (NSArray<Product *>)results;
         //NSLog(@"results: %@",results);
@@ -91,5 +90,26 @@ NSManagedObjectContext *managedObjectContext;
     }
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [products count];
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString * productCell = @"ProductCell";
+    
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:productCell];
+    
+    if(cell == nil){
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:productCell];
+        
+    }
+    
+    return cell;
+}
 
 @end
