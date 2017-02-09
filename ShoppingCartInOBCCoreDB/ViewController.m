@@ -31,8 +31,20 @@ NSManagedObjectContext *managedObjectContext;
     // declare products NSMutableArray
     self.products = [[NSMutableArray<Product *> alloc]init];
     
+    // init tableview
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    
+    // add delegate
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    
     //[self createProducts];
     [self fetchProducts];
+    
+    [self.view addSubview:self.tableView];
+    
+    
 }
 
 
@@ -57,8 +69,10 @@ NSManagedObjectContext *managedObjectContext;
     }
     else
     {
+        NSLog(@"result: %@",results);
         for(NSManagedObject *result in results)
         {
+            NSLog(@"result: %@",results);
             Product * product = result;
            
             [self.products addObject:product];
@@ -69,7 +83,7 @@ NSManagedObjectContext *managedObjectContext;
         //NSLog(@"results: %@",results);
     }
     
-    NSLog(@"products number: %@",[self.products count]);
+    NSLog(@"products number: %i",(long)[self.products count]);
 }
 
 -(void)createProducts{
@@ -98,7 +112,7 @@ NSManagedObjectContext *managedObjectContext;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [products count];
+    return [self.products count];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -115,9 +129,10 @@ NSManagedObjectContext *managedObjectContext;
         cell = (ProductTableViewCell*)[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:productCell];
         
     }
-    cell.product = products[indexPath.row];
+    cell.product = self.products[indexPath.row];
     NSLog(@"product");
     return cell;
+    
 }
 
 @end
