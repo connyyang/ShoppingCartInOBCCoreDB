@@ -12,11 +12,12 @@
 @interface ProductTableViewCell : UITableViewCell
 {
     Product * product;
+    
 }
 
 @property (nonatomic, retain) Product *product;
 
-@property (nonatomic, retain) IBOutlet UILabel* proNameLable;
+@property (nonatomic, weak) IBOutlet UILabel* proNameLable;
 
 @property (weak, nonatomic) IBOutlet UILabel *proPriceLabel;
 

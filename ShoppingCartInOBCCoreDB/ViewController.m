@@ -31,18 +31,25 @@ NSManagedObjectContext *managedObjectContext;
     // declare products NSMutableArray
     self.products = [[NSMutableArray<Product *> alloc]init];
     
+   // [self.tableView registerClass:[ProductTableViewCell class] forCellReuseIdentifier:@"ProductCell"];
+    
+    //[self.tableView registerNib:[UINib nibWithNibName:@"ProductTableViewCell" bundle:nil] forCellReuseIdentifier:@"ProductCell"];
+    
     // init tableview
-    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    //self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     
     // add delegate
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    CGFloat rowHeight = 120;
+    [self.tableView setRowHeight:rowHeight];
+    
     
     //[self createProducts];
     [self fetchProducts];
     
-    [self.view addSubview:self.tableView];
+    //[self.view addSubview:self.tableView];
     
     
 }
@@ -123,15 +130,41 @@ NSManagedObjectContext *managedObjectContext;
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString * productCell = @"ProductCell";
     
-    ProductTableViewCell * cell = (ProductTableViewCell*)[tableView dequeueReusableCellWithIdentifier:productCell];
+    ProductTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:productCell];
+    
     
     if(cell == nil){
         cell = (ProductTableViewCell*)[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:productCell];
         
+        NSLog(@"Cell is nil");
     }
-    cell.product = self.products[indexPath.row];
-    NSLog(@"product");
+    Product * product = [self.products objectAtIndex:indexPath.row];
+    cell.product = product;
+    
+    NSLog(@"ITS LABEL dd:%@",product.product_img);
+
+    
+    cell.proNameLable.text = [NSString stringWithFormat:@"%@",product.product_name];
+    cell.proPriceLabel.text = [NSString stringWithFormat:@"$%f",(float)product.product_price];
+    cell.proImageView.image = (UIImage *)product.product_img;
+   // cell.imageView.image = [UIImage imageNamed:@"img_ipad.png"];
+    
     return cell;
+    
+
+//    static NSString * productCell = @"ProductCell";
+//    UITableViewCell * cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:productCell];
+//    
+//    if(cell == nil){
+//        cell = (UITableViewCell*)[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:productCell];
+//        
+//    }
+//    //cell.product = [self.products objectAtIndex:indexPath.row];
+//    Product * product = [self.products objectAtIndex:indexPath.row];
+//    cell.textLabel.text = product.product_name;
+//    NSLog(@"product");
+//    return cell;
+
     
 }
 

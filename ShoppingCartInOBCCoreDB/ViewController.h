@@ -17,7 +17,7 @@
 
 @property (nonatomic, retain) NSMutableArray<Product *> *products;
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
