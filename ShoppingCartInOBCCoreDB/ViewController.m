@@ -145,7 +145,7 @@ NSManagedObjectContext *managedObjectContext;
 
     
     cell.proNameLable.text = [NSString stringWithFormat:@"%@",product.product_name];
-    cell.proPriceLabel.text = [NSString stringWithFormat:@"$%f",(float)product.product_price];
+    cell.proPriceLabel.text = [NSString stringWithFormat:@"$%i",(int)product.product_price];
     cell.proImageView.image = (UIImage *)product.product_img;
    // cell.imageView.image = [UIImage imageNamed:@"img_ipad.png"];
     
@@ -166,6 +166,10 @@ NSManagedObjectContext *managedObjectContext;
 //    return cell;
 
     
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 140.0;
 }
 
 @end

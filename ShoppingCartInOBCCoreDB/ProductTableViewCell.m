@@ -51,6 +51,7 @@
 //}
 
 
-- (IBAction)stepperDidChange:(id)sender {
+- (IBAction)stepperDidChange:(UIStepper *)sender {
+    self.proQtyLabel.text = [NSString stringWithFormat:@"%02i",(int)[sender value]];
 }
 @end
