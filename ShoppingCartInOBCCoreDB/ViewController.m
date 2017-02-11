@@ -17,6 +17,8 @@ NSManagedObjectContext *managedObjectContext;
 
 @end
 
+NSMutableDictionary * shoppingCart;
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -30,6 +32,9 @@ NSManagedObjectContext *managedObjectContext;
     
     // declare products NSMutableArray
     self.products = [[NSMutableArray<Product *> alloc]init];
+    
+    // init shoppingcart
+    shoppingCart = [[NSMutableDictionary alloc]init];
     
    // [self.tableView registerClass:[ProductTableViewCell class] forCellReuseIdentifier:@"ProductCell"];
     

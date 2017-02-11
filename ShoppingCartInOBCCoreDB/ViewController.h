@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Product+CoreDataClass.h"
 
-
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     NSMutableArray<Product *> *products;

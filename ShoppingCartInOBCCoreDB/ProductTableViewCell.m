@@ -53,5 +53,25 @@
 
 - (IBAction)stepperDidChange:(UIStepper *)sender {
     self.proQtyLabel.text = [NSString stringWithFormat:@"%02i",(int)[sender value]];
+    
+    
+    extern NSMutableDictionary * shoppingCart;
+    
+    if(sender.value == 0)
+    {
+        
+        [shoppingCart removeObjectForKey:self.product.product_id];
+    }
+    else
+    {
+        NSArray * shopping = [[NSArray alloc]initWithObjects:self.product, [sender value], nil];
+       // NSString * keyIdentifiler = [shoppingCart ]
+        
+       // [shoppingCart objectForKey:product.product_id];
+        [shoppingCart setObject:shopping forKey:self.product.product_id];
+        
+    }
+    
+    NSLog(@"shopping cart : %@",shoppingCart);
 }
 @end
