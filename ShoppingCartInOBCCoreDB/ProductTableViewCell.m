@@ -13,7 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    NSLog(@"here");
+    //NSLog(@"here");
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -64,7 +64,9 @@
     }
     else
     {
-        NSArray * shopping = [[NSArray alloc]initWithObjects:self.product, [sender value], nil];
+        //NSLog(@"sender value:%i",(int)sender.value);
+        NSArray * shopping = [[NSArray alloc]initWithObjects:self.product, [NSNumber numberWithInt:sender.value], nil];
+       // NSLog(@"SHOPPING: %@",shopping);
        // NSString * keyIdentifiler = [shoppingCart ]
         
        // [shoppingCart objectForKey:product.product_id];
@@ -72,6 +74,6 @@
         
     }
     
-    NSLog(@"shopping cart : %@",shoppingCart);
+    //NSLog(@"shopping cart : %@",shoppingCart);
 }
 @end

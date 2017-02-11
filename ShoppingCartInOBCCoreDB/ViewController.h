@@ -18,5 +18,8 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
+
+- (IBAction)checkOutDidClick:(id)sender;
+
 @end
 

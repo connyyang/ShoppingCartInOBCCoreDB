@@ -120,7 +120,13 @@
                                 <state key="normal" title="Check Out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkOutDidClick:" destination="BYZ-38-t0r" eventType="touchDown" id="PqG-Az-gdG"/>
+                                </connections>
                             </button>
+                            <connections>
+                                <segue destination="O9A-9B-MhS" kind="show" identifier="showCheckOut" id="Wih-gQ-deU"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -130,6 +136,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="101.19940029985008"/>
+        </scene>
+        <!--Checkout View Controller-->
+        <scene sceneID="w6o-Rn-HF4">
+            <objects>
+                <viewController id="O9A-9B-MhS" customClass="CheckoutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fO9-Y8-9B2"/>
+                        <viewControllerLayoutGuide type="bottom" id="oaB-Ak-77g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kiq-0g-ZS4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBK-ZA-Ohc">
+                                <rect key="frame" x="16" y="108" width="343" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="19d-xL-4t4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total include tax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ckf-8c-syA">
+                                <rect key="frame" x="16" y="195" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="RJc-8z-AGP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ckf-8c-syA" firstAttribute="top" secondItem="cBK-ZA-Ohc" secondAttribute="bottom" constant="8" id="2BW-Ce-amd"/>
+                            <constraint firstItem="Ckf-8c-syA" firstAttribute="leading" secondItem="kiq-0g-ZS4" secondAttribute="leadingMargin" id="E6m-Vu-ovW"/>
+                            <constraint firstItem="cBK-ZA-Ohc" firstAttribute="top" secondItem="fO9-Y8-9B2" secondAttribute="bottom" constant="44" id="bb5-N3-lzA"/>
+                            <constraint firstItem="cBK-ZA-Ohc" firstAttribute="leading" secondItem="kiq-0g-ZS4" secondAttribute="leadingMargin" id="gZv-ML-ipn"/>
+                            <constraint firstItem="Ckf-8c-syA" firstAttribute="trailing" secondItem="kiq-0g-ZS4" secondAttribute="trailingMargin" id="lyp-iR-VEu"/>
+                            <constraint firstItem="cBK-ZA-Ohc" firstAttribute="trailing" secondItem="kiq-0g-ZS4" secondAttribute="trailingMargin" id="pQ7-YX-UOG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="totalLabel" destination="cBK-ZA-Ohc" id="3x8-1W-YWv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FTP-5O-1vr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1848.8" y="106.59670164917542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U54-9I-pS8">

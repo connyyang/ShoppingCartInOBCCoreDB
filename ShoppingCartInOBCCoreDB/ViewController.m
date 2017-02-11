@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "Product+CoreDataClass.h"
 #import "ProductTableViewCell.h"
+#import "CheckoutViewController.h"
 
 NSManagedObjectContext *managedObjectContext;
 
@@ -81,21 +82,21 @@ NSMutableDictionary * shoppingCart;
     }
     else
     {
-        NSLog(@"result: %@",results);
+       // NSLog(@"result: %@",results);
         for(NSManagedObject *result in results)
         {
-            NSLog(@"result: %@",results);
+           // NSLog(@"result: %@",results);
             Product * product = result;
            
             [self.products addObject:product];
             
-            NSLog(@"products : %@", self.products);
+            //NSLog(@"products : %@", self.products);
         }
         //products = (NSArray<Product *>)results;
         //NSLog(@"results: %@",results);
     }
     
-    NSLog(@"products number: %i",(long)[self.products count]);
+   // NSLog(@"products number: %i",(long)[self.products count]);
 }
 
 -(void)createProducts{
@@ -141,12 +142,12 @@ NSMutableDictionary * shoppingCart;
     if(cell == nil){
         cell = (ProductTableViewCell*)[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:productCell];
         
-        NSLog(@"Cell is nil");
+        //NSLog(@"Cell is nil");
     }
     Product * product = [self.products objectAtIndex:indexPath.row];
     cell.product = product;
     
-    NSLog(@"ITS LABEL dd:%@",product.product_img);
+    //NSLog(@"ITS LABEL dd:%@",product.product_img);
 
     
     cell.proNameLable.text = [NSString stringWithFormat:@"%@",product.product_name];
@@ -177,4 +178,20 @@ NSMutableDictionary * shoppingCart;
     return 140.0;
 }
 
+- (IBAction)checkOutDidClick:(id)sender {
+   // NSLog(@"click");
+    [self performSegueWithIdentifier:@"showCheckOut" sender:shoppingCart];
+   // NSLog(@"perform segue");
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+   // NSLog(@"prepare segue");
+    if([[segue identifier] isEqualToString:@"showCheckOut"])
+    {
+        CheckoutViewController * checkoutVC = [segue destinationViewController];
+        checkoutVC.shoppingCart = shoppingCart;
+                
+    }
+}
 @end
